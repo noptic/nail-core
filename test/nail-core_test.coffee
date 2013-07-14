@@ -53,9 +53,9 @@ module.exports =
   "method 'to'":
     setUp: (done) ->
       @container = {}
-      subject.to @container, 'test',
-        TestClass: {}
-
+      @definition = []
+      subject.to @container,
+        TestClass: @definition
       @instance = new @container.TestClass
       done()
 
@@ -68,15 +68,24 @@ module.exports =
       test.done()
 
     "adds meta data to the constructor": (test) ->
-      test.expect 4
       test.ok !(_.isUndefined @container.TestClass.container),
         "constructor.container must be defined"
       test.ok !(_.isUndefined @container.TestClass.className),
         "constructor.className must be defined"
+      test.ok !(_.isUndefined @container.TestClass.definition),
+        "constructor.definition must be defined"
+      test.ok !(_.isUndefined @container.TestClass.nail),
+        "constructor.nail must be defined"
+      test.ok !(_.isUndefined @container.TestClass.namespace),
+        "constructor.namespace must be defined"
+      test.ok !(_.isUndefined @container.TestClass.fullyQualifiedName),
+        "constructor.fullyQualifiedName must be defined"
       test.equals @container.TestClass.container, @container,
         "constructor.container must reference the object containing the class definition"
       test.equals @container.TestClass.className, 'TestClass',
         "container.className should be 'TestClass' but is '#{@container.TestClass.className}'"
+      test.equals @container.TestClass.definition, @definition,
+        "container.className should be a eference to the original definition"
       test.done()
 
     "uses modules added with 'use'": (test) ->
@@ -94,10 +103,23 @@ module.exports =
         "The new class must be passed as first argument"
       test.done()
 
+    "defining 2 classes with the same name throws an error": (test) ->
+      test.expect 1
+      test.throws (()->
+        subject.to {},'nail-core.test', dummy: {}
+        subject.to {},'nail-core.test', dummy: {}
+        ), Error
+      test.done()
+
+    "class with namespace is added to lib": (test) ->
+      subject.to @container, 'nail-core.test', GlobalClass: {}
+      test.expect 1
+      test.strictEqual @container.GlobalClass, subject.lib[@container.GlobalClass.fullyQualifiedName]
+      test.done()
   "init":
     "is called": (test) ->
       classes = {}
-      subject.to classes, 'test',
+      subject.to classes,
         Dummy: {}
       classes.Dummy::init = () -> @text = 'foo'
       instance = new classes.Dummy()

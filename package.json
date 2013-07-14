@@ -1,43 +1,41 @@
 {
-    "name": "nail-core",
-    "description": "Modular class creation - every aspect of a class (inheritance, properties,...) is handled by a customizable module. This module serves as a plugin host.",
-    "version": "0.1.0alpha1",
-    "homepage": "https://github.com/noptic/nail-core",
-    "author": {
-        "name": "Oliver Anan",
-        "email": "oliver@ananit.de"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https:/github.com/noptic/nail-core"
-    },
-    "bugs": {
-        "url": ""
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "/blob/master/LICENSE-MIT"
-        }
-    ],
-    "main": "lib/nail-core",
-    "engines": {
-        "node": ">= 0.6.0"
-    },
-    "scripts": {
-        "test": "grunt nodeunit"
-    },
-    "dependencies": {
-        "underscore": "*"
-    },
-    "devDependencies": {
-        "grunt-contrib-coffee": "0.4.0rc7",
-        "grunt-contrib-concat": "0.1.2rc6",
-        "grunt-contrib-uglify": "0.1.1rc6",
-        "grunt-contrib-nodeunit": "0.1.2rc6",
-        "grunt-contrib-watch": "0.2.0rc5",
-        "grunt-docco": "*",
-        "grunt": "0.4.0rc7",
-        "underscore": "*"
+  "name": "nail-core",
+  "description": "Modular class creation - every aspect of a class (inheritance, properties,...) is handled by a customizable module. This module serves as a plugin host.",
+  "version": "0.1.0alpha2",
+  "homepage": "https://github.com/noptic/nail-core",
+  "author": {
+    "name": "Oliver Anan",
+    "email": "oliver@ananit.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https:/github.com/noptic/nail-core"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
     }
+  ],
+  "main": "lib/nail-core",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "dependencies": {
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "0.7.0",
+    "grunt-contrib-concat": "0.1.2rc6",
+    "grunt-contrib-nodeunit": "0.1.2rc6",
+    "grunt-contrib-watch": "0.2.0rc5",
+    "grunt": "0.4.0",
+    "underscore": "*"
+  }
 }
