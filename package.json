@@ -1,7 +1,7 @@
 {
   "name": "nail-core",
   "description": "Modular class creation - every aspect of a class (inheritance, properties,...) is handled by a customizable module. This module serves as a plugin host.",
-  "version": "0.1.0alpha2",
+  "version": "0.1.0alpha3",
   "homepage": "https://github.com/noptic/nail-core",
   "author": {
     "name": "Oliver Anan",
