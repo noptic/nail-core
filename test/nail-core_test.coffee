@@ -116,6 +116,11 @@ module.exports =
       test.expect 1
       test.strictEqual @container.GlobalClass, subject.lib[@container.GlobalClass.fullyQualifiedName]
       test.done()
+
+    "define class wothout namespace or container": (test) ->
+      subject.to Foo: {}
+      test.done()
+
   "init":
     "is called": (test) ->
       classes = {}

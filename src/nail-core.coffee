@@ -34,7 +34,7 @@ class NailApi
         container = arg1
         namespace = null
         classes = arg2
-    else if argument.length == 1
+    else if arguments.length == 1
       container = {}
       namespace = null
       classes = arg1
