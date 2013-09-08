@@ -1,0 +1,8 @@
+/coverage/
+/docs/
+/spec/
+/src/
+/test/
+.gitignore
+Gruntfile.coffee
+build.json

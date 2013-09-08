@@ -1,41 +1,45 @@
 {
   "name": "nail-core",
-  "description": "Modular class creation - every aspect of a class (inheritance, properties,...) is handled by a customizable module. This module serves as a plugin host.",
-  "version": "0.1.0alpha3",
+  "description": "Module host for nail build enviroments.",
+  "version": "0.1.0beta1",
   "homepage": "https://github.com/noptic/nail-core",
   "author": {
-    "name": "Oliver Anan",
+    "name": "noptic",
     "email": "oliver@ananit.de"
   },
   "repository": {
     "type": "git",
-    "url": "https:/github.com/noptic/nail-core"
+    "url": "git://github.com/noptic/nail-core.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/noptic/nail-core/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "/blob/master/LICENSE-MIT"
+      "url": "https://github.com/noptic/nail-core/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/nail-core",
+  "main": "lib/module",
   "engines": {
     "node": ">= 0.6.0"
   },
   "scripts": {
-    "test": "grunt nodeunit"
-  },
-  "dependencies": {
-    "underscore": "*"
+    "test": "grunt test"
   },
   "devDependencies": {
     "grunt-contrib-coffee": "0.7.0",
-    "grunt-contrib-concat": "0.1.2rc6",
-    "grunt-contrib-nodeunit": "0.1.2rc6",
-    "grunt-contrib-watch": "0.2.0rc5",
-    "grunt": "0.4.0",
-    "underscore": "*"
+    "grunt-contrib-nodeunit": "0.2.0",
+    "grunt": "0.4.1",
+    "grunt-contrib-concat": "0.3.0",
+    "grunt-simple-mocha": "~0.4.0",
+    "mocha": "~1.12.0",
+    "should": "~1.2.2",
+    "grunt-istanbul-coverage": "0.0.1",
+    "grunt-istanbul": "~0.2.3",
+    "js-yaml": "~2.1.0"
+  },
+  "dependencies": {
+    "underscore": "~1.5.1"
   }
 }

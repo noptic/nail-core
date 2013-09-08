@@ -10,35 +10,40 @@ class NailApi
   parent: null
   lib: {}
   use: () ->
-    newInstance = _.clone(this)
-    _.extend newInstance,
-      parent: this
-      modules = @modules.slice 0
-      lib = @lib
+    newInstance = new NailApi
+    newInstance.parent =this
+    newInstance.modules = []
+    newInstance.lib = @lib
+
+    for module in @modules
+      newInstance.modules.push module
     for module in arguments
       newInstance.modules.push module
 
     return newInstance
 
   to: (arg1, arg2, arg3) ->
-    if arguments.length >=3
+
+    if arguments.length == 0
+      return {}
+    else if arguments.length >=3
       container = arg1
       namespace = arg2
       classes   = arg3
     else if arguments.length == 2
-      if _.isString arg1
-        container = {}
-        namespace = arg1
-        classes = arg2
-      else if _.isObject arg1
+      if _.isObject arg1
         container = arg1
         namespace = null
         classes = arg2
-    else if arguments.length == 1
+      else
+        container = {}
+        namespace = arg1
+        classes = arg2
+    else
       container = {}
       namespace = null
       classes = arg1
-    else return {}
+
     for name,definition of classes
       newClass = () ->
         @init.apply(this, arguments)

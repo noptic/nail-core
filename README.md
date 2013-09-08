@@ -1,31 +1,32 @@
 nail-core
 =========
-Creates class prototypes and delegates the class creation to all registered
-modules.
+The `nail-core` serves as a module host for nail build enviroments.
 
-The core itself only creates a empty protype and a constructor with some metadata.
+Setup
+-----
+Install the module with: `npm install nail-core --save`
 
-Metadata.
---------
-Every constructor created with nail has the following properties:
+Usage
+-----
+To create a new build enviroment use the api function `use`:
 
- - *nail* the intance of nail which was used to create the class
- - *definition* the definition which is passed to nail when the class is created
- - *container* the container of the class constructor.
- - *className* the classes name within the conatiner (example: 'MyClass')
- - *namespace* a namespace for the class, which should be related or equal to the package name.
- - *fullyQualifiedName* the classes namespace and name connected with a '.'.
+```coffee
+myNail = require('nail-core').use myModule, myOtherModule
+```
 
-Modules
--------
-In nail every aspect of a class (inheritance, properties,...) is handled by a
-sepearte module.
+It is recomended to define your nail builder in a seperate file and load it
+with require:
 
-A Moule is an object with the method `augment(newClass)`. On class creation
-all modules augment methods get called.
+```coffee
+module.exports = require(nail-core).use myModule, myOtherModule
+```
 
-Modules can not be added to an existing instance of nail. Instead calling nail.use
-will return a new instance containing all modules of the called instance plus the modules
-passed as arguments.
+For a fast start the [nail] bundle already contains properties,
+methods and inheritance.
 
-    myNail = require('nail-core').use( require('nail-extend'),require('my-module') )
+Documentation
+-------------
+Further documentation can be found in the API [specification][]
+
+[specification]: spec/api.coffee.md
+[nail]: https://github.com/noptic/nail
