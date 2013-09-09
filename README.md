@@ -8,7 +8,7 @@ Install the module with: `npm install nail-core --save`
 
 Usage
 -----
-To create a new build enviroment use the api function `use`:
+To create a new build enviroment use the api function [use][]:
 
 ```coffee
 myNail = require('nail-core').use myModule, myOtherModule
@@ -21,8 +21,8 @@ with require:
 module.exports = require(nail-core).use myModule, myOtherModule
 ```
 
-For a fast start the [nail] bundle already contains properties,
-methods and inheritance.
+For a quick start you an use the [nail] bundle.It  already contains modules
+for properties, methods and class inheritance.
 
 Documentation
 -------------
@@ -30,3 +30,4 @@ Further documentation can be found in the API [specification][]
 
 [specification]: spec/api.coffee.md
 [nail]: https://github.com/noptic/nail
+[use]: spec/api.coffee.md#function-use

@@ -1,5 +1,5 @@
-nail-core
-=========
+nail-core API
+=============
 nail creates classes from structured objects, using a seperate module for every
 aspect of the class like properties and methods. The `nail-core` offers an API
 to bundle modules into a new `NailApi`.
@@ -19,20 +19,12 @@ Module Structure
 ----------------
 The module exports an instance of `NailApi`.
 
-    describe 'NailApi', ->
+    describe 'nail-core', ->
 
 The instance is an object.
 
       it 'is an object', ->
         nail.should.be.a 'object'
-
-The intance has the properties
-
- - parent
- - modules
- - lib
- - use
- - to
 
       it 'has a "parent" property', ->
         nail.should.have.property 'parent'
@@ -48,6 +40,7 @@ The intance has the properties
 
       it 'has a "to" property', ->
         nail.should.have.property 'to'
+
 
 function use
 ------------

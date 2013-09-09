@@ -8,7 +8,7 @@ _ = require('underscore');
 
 they = it;
 
-describe('NailApi', function() {
+describe('nail-core', function() {
   it('is an object', function() {
     return nail.should.be.a('object');
   });
