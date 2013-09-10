@@ -1,5 +1,5 @@
-function to
-===========
+NailApi.to
+==========
 This function creates one or more new classes.
 It accepts an object containing class definitions as it´s last parameter.
 
@@ -28,7 +28,7 @@ Structure
         instance = new lib.MyClass()
         (instance instanceof lib.MyClass).should.be.ok
 
-###containers and namespaces
+###Containers and Namespaces
 `to(container, definitions)` Callng `to` with 2 parameters,
 container and definitions, adds all new classes to the container.
 

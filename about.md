@@ -12,7 +12,7 @@ npm install nail-core --save`
 
 Usage
 -----
-To create a new build enviroment use the api function [use]:
+To create a new build enviroment use [NailApi.use]:
 
 ```coffee
 myNail = require('nail-core').use myModule, myOtherModule
@@ -25,7 +25,7 @@ with require:
 module.exports = require(nail-core).use myModule, myOtherModule
 ```
 
-Once you have created a nail builder you can create new classes with the "[to]"
+Once you have created a nail builder you can create new classes with the "[NailApi.to]"
 function.
 
 ```coffee
