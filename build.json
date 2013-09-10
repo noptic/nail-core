@@ -16,5 +16,9 @@
     "functions": 90,
     "branches": 90,
     "lines": 90
+  },
+  "see": {
+    "nail": "https://github.com/noptic/nail",
+    "npm": "https://github.com/noptic/nail"
   }
 }

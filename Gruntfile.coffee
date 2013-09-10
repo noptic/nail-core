@@ -58,7 +58,7 @@ module.exports = (grunt) ->
       rootPath: "#{configuration.path.coverage}/instrument/lib"
 
     makeReport:
-      src: "coverage/reports/**/*.json"
+      src: "#{configuration.path.coverage}/**/*.json"
       options:
         type: "lcov"
         dir: configuration.path.docs
@@ -88,6 +88,7 @@ module.exports = (grunt) ->
     'coffee'
     'coverageReport'
     'coverage'
+    'docs'
   ]
 
   grunt.registerTask 'coverageReport', [
@@ -104,3 +105,45 @@ module.exports = (grunt) ->
     for component in components
       if ! fs.existsSync("#{configuration.path.specs}/#{component}.coffee.md")
         grunt.warn "Missing spec for component #{component}"
+
+  grunt.registerTask 'docs', ->
+    fs = require 'fs'
+    packageInfo = grunt.file.readJSON('package.json')
+    related = configuration.see
+    for module in fs.readdirSync('./node_modules')
+      infoPath = "./node_modules/#{module}/package.json"
+      if fs.existsSync(infoPath)
+        moduleInfo = grunt.file.readJSON(infoPath)
+        if moduleInfo.homepage
+          related[module] = moduleInfo.homepage
+        else
+          related[module] ="https://npmjs.org/package/#{module}"
+    for component in components
+      related[component] = "./#{configuration.path.specs}/#{component}.coffee.md"
+    about = fs.readFileSync('about.md').toString().trim()
+
+    about += "\n\nDocumentation\n-------------"
+    for component in components
+      about += "\n - [#{component}][]"
+    about += "\n"
+
+    about += "\n\nDependencies\n------------"
+    for name,version of packageInfo.dependencies
+      if related[name]
+        about += "\n - [#{name}] #{version}"
+      else
+        about += "\n - #{name} #{version}"
+    about += "\n"
+
+    about += "\n\nDev-Dependencies\n----------------"
+    for name,version of packageInfo.devDependencies
+      if related[name]
+        about += "\n - [#{name}] #{version}"
+      else
+        about += "\n - #{name} #{version}"
+    about += "\n"
+
+    for name,link of related
+      about += "\n[#{name}]: #{link}"
+
+    fs.writeFileSync('README.md',about)
