@@ -78,6 +78,7 @@ Dev-Dependencies
 [grunt-simple-mocha]: https://github.com/yaymukund/grunt-simple-mocha
 [js-yaml]: https://github.com/nodeca/js-yaml
 [mocha]: https://npmjs.org/package/mocha
+[should]: https://github.com/visionmedia/should.js
 [underscore]: http://underscorejs.org
 [NailApi.to]: ./spec/NailApi.to.coffee.md
 [NailApi.use]: ./spec/NailApi.use.coffee.md

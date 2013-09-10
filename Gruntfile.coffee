@@ -109,15 +109,21 @@ module.exports = (grunt) ->
   grunt.registerTask 'docs', ->
     fs = require 'fs'
     packageInfo = grunt.file.readJSON('package.json')
+    #links from configuration
     related = configuration.see
+
+    #links from moules
     for module in fs.readdirSync('./node_modules')
       infoPath = "./node_modules/#{module}/package.json"
       if fs.existsSync(infoPath)
         moduleInfo = grunt.file.readJSON(infoPath)
+        #usemodules homepageif it is set
         if moduleInfo.homepage
           related[module] = moduleInfo.homepage
+        #orfallback to the npm page
         else
           related[module] ="https://npmjs.org/package/#{module}"
+
     for component in components
       related[component] = "./#{configuration.path.specs}/#{component}.coffee.md"
     about = fs.readFileSync('about.md').toString().trim()
@@ -147,3 +153,4 @@ module.exports = (grunt) ->
       about += "\n[#{name}]: #{link}"
 
     fs.writeFileSync('README.md',about)
+    console.log related
