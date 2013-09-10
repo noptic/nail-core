@@ -84,11 +84,11 @@ module.exports = (grunt) ->
   grunt.registerTask 'test', ['coffee','simplemocha']
 
   grunt.registerTask 'default', [
+    'docs'
     'validate'
     'coffee'
     'coverageReport'
     'coverage'
-    'docs'
   ]
 
   grunt.registerTask 'coverageReport', [
@@ -153,4 +153,3 @@ module.exports = (grunt) ->
       about += "\n[#{name}]: #{link}"
 
     fs.writeFileSync('README.md',about)
-    console.log related
