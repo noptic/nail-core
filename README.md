@@ -25,14 +25,28 @@ with require:
 module.exports = require(nail-core).use myModule, myOtherModule
 ```
 
-For a quick start use the [nail] bundle. It  already contains some modules
-and illustartes how to use nail builders to create new classes.
+Once you have created a nail builder you can create new classes with the "[to]"
+function.
 
-[use]: spec/api.coffee.md#function-use
+```coffee
+nail.to "myNamespace",
+  MyClass:
+    properties:
+      name: 'anon'
+    methods:
+      hello: ()-> "hello #{@name}"
+```
+
+For a quick start use the [nail] bundle.
+
+It already contains some modules and illustartes how to use nail builders
+to create new classes.
 
 Documentation
 -------------
- - [api][]
+ - [NailApi.to][]
+ - [NailApi.use][]
+ - [NailApi][]
 
 
 Dependencies
@@ -64,6 +78,7 @@ Dev-Dependencies
 [grunt-simple-mocha]: https://github.com/yaymukund/grunt-simple-mocha
 [js-yaml]: https://github.com/nodeca/js-yaml
 [mocha]: https://npmjs.org/package/mocha
-[should]: https://github.com/visionmedia/should.js
 [underscore]: http://underscorejs.org
-[api]: ./spec/api.coffee.md
+[NailApi.to]: ./spec/NailApi.to.coffee.md
+[NailApi.use]: ./spec/NailApi.use.coffee.md
+[NailApi]: ./spec/NailApi.coffee.md

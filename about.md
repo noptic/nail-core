@@ -25,7 +25,19 @@ with require:
 module.exports = require(nail-core).use myModule, myOtherModule
 ```
 
-For a quick start use the [nail] bundle. It  already contains some modules
-and illustartes how to use nail builders to create new classes.
+Once you have created a nail builder you can create new classes with the "[to]"
+function.
 
-[use]: spec/api.coffee.md#function-use
+```coffee
+nail.to "myNamespace",
+  MyClass:
+    properties:
+      name: 'anon'
+    methods:
+      hello: ()-> "hello #{@name}"
+```
+
+For a quick start use the [nail] bundle.
+
+It already contains some modules and illustartes how to use nail builders
+to create new classes.

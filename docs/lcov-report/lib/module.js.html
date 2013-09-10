@@ -183,7 +183,7 @@
     <h1>Code coverage report for <span class="entity">lib/module.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">100% <small>(63 / 63)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">100% <small>(67 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
         Branches: <span class="metric">100% <small>(12 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -192,7 +192,7 @@
         Functions: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">100% <small>(63 / 63)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(67 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
     </h2>
     <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib\</a> &#187; module.js</div>
@@ -294,36 +294,17 @@
 93
 94
 95
-96</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">8</span>
-<span class="cline-any cline-yes">8</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">13</span>
@@ -386,12 +367,128 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var NailApi, _;
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var to, _;
 &nbsp;
 _ = require('underscore');
+&nbsp;
+to = function(arg1, arg2, arg3) {
+  var classes, container, definition, fullyQualifiedName, metaKey, metaValue, module, name, namespace, newClass, _i, _len, _ref, _ref1;
+  if (arguments.length === 0) {
+    return {};
+  } else if (arguments.length &gt;= 3) {
+    container = arg1;
+    namespace = arg2;
+    classes = arg3;
+  } else if (arguments.length === 2) {
+    if (_.isObject(arg1)) {
+      container = arg1;
+      namespace = null;
+      classes = arg2;
+    } else {
+      container = {};
+      namespace = arg1;
+      classes = arg2;
+    }
+  } else {
+    container = {};
+    namespace = null;
+    classes = arg1;
+  }
+  for (name in classes) {
+    definition = classes[name];
+    newClass = function() {
+      return this.init.apply(this, arguments);
+    };
+    fullyQualifiedName = null;
+    if (namespace) {
+      fullyQualifiedName = "" + namespace + "." + name;
+      if (this.lib[fullyQualifiedName]) {
+        throw new Error("can not redifine " + fullyQualifiedName);
+      }
+      this.lib[fullyQualifiedName] = newClass;
+    }
+    _ref = {
+      className: name,
+      nail: this,
+      container: container,
+      namespace: namespace,
+      fullyQualifiedName: fullyQualifiedName,
+      definition: definition
+    };
+    for (metaKey in _ref) {
+      metaValue = _ref[metaKey];
+      newClass[metaKey] = metaValue;
+    }
+    newClass.prototype.init = function() {};
+    _ref1 = this.modules;
+    for (_i = 0, _len = _ref1.length; _i &lt; _len; _i++) {
+      module = _ref1[_i];
+      module.augment(newClass);
+    }
+    container[name] = newClass;
+  }
+  return container;
+};
+&nbsp;
+var use;
+&nbsp;
+use = function() {
+  var module, newInstance, _i, _j, _len, _len1, _ref;
+  newInstance = new NailApi;
+  newInstance.parent = this;
+  newInstance.modules = [];
+  newInstance.lib = this.lib;
+  _ref = this.modules;
+  for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {
+    module = _ref[_i];
+    newInstance.modules.push(module);
+  }
+  for (_j = 0, _len1 = arguments.length; _j &lt; _len1; _j++) {
+    module = arguments[_j];
+    newInstance.modules.push(module);
+  }
+  return newInstance;
+};
+&nbsp;
+var NailApi;
 &nbsp;
 NailApi = (function() {
   function NailApi() {}
@@ -402,82 +499,9 @@ NailApi = (function() {
 &nbsp;
   NailApi.prototype.lib = {};
 &nbsp;
-  NailApi.prototype.use = function() {
-    var module, newInstance, _i, _j, _len, _len1, _ref;
-    newInstance = new NailApi;
-    newInstance.parent = this;
-    newInstance.modules = [];
-    newInstance.lib = this.lib;
-    _ref = this.modules;
-    for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {
-      module = _ref[_i];
-      newInstance.modules.push(module);
-    }
-    for (_j = 0, _len1 = arguments.length; _j &lt; _len1; _j++) {
-      module = arguments[_j];
-      newInstance.modules.push(module);
-    }
-    return newInstance;
-  };
+  NailApi.prototype.use = use;
 &nbsp;
-  NailApi.prototype.to = function(arg1, arg2, arg3) {
-    var classes, container, definition, fullyQualifiedName, metaKey, metaValue, module, name, namespace, newClass, _i, _len, _ref, _ref1;
-    if (arguments.length === 0) {
-      return {};
-    } else if (arguments.length &gt;= 3) {
-      container = arg1;
-      namespace = arg2;
-      classes = arg3;
-    } else if (arguments.length === 2) {
-      if (_.isObject(arg1)) {
-        container = arg1;
-        namespace = null;
-        classes = arg2;
-      } else {
-        container = {};
-        namespace = arg1;
-        classes = arg2;
-      }
-    } else {
-      container = {};
-      namespace = null;
-      classes = arg1;
-    }
-    for (name in classes) {
-      definition = classes[name];
-      newClass = function() {
-        return this.init.apply(this, arguments);
-      };
-      fullyQualifiedName = null;
-      if (namespace) {
-        fullyQualifiedName = "" + namespace + "." + name;
-        if (this.lib[fullyQualifiedName]) {
-          throw new Error("can not redifine " + fullyQualifiedName);
-        }
-        this.lib[fullyQualifiedName] = newClass;
-      }
-      _ref = {
-        className: name,
-        nail: this,
-        container: container,
-        namespace: namespace,
-        fullyQualifiedName: fullyQualifiedName,
-        definition: definition
-      };
-      for (metaKey in _ref) {
-        metaValue = _ref[metaKey];
-        newClass[metaKey] = metaValue;
-      }
-      newClass.prototype.init = function() {};
-      _ref1 = this.modules;
-      for (_i = 0, _len = _ref1.length; _i &lt; _len; _i++) {
-        module = _ref1[_i];
-        module.augment(newClass);
-      }
-      container[name] = newClass;
-    }
-    return container;
-  };
+  NailApi.prototype.to = to;
 &nbsp;
   return NailApi;
 &nbsp;
@@ -489,7 +513,7 @@ module.exports = new NailApi();
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Sep 10 2013 18:36:02 GMT+0200 (Mitteleuropäische Sommerzeit)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Sep 10 2013 23:20:11 GMT+0200 (Mitteleuropäische Sommerzeit)</div>
 </div>
 
 <script src="../prettify.js"></script>
