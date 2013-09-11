@@ -45,6 +45,7 @@ to create new classes.
 Documentation
 -------------
 - [NailApi][NailApi]
+    - [modules][NailApi.modules]
     - [to][NailApi.to]
     - [use][NailApi.use]
 
@@ -80,6 +81,7 @@ Dev-Dependencies
 [mocha]: https://npmjs.org/package/mocha
 [should]: https://github.com/visionmedia/should.js
 [underscore]: http://underscorejs.org
+[NailApi.modules]: ./spec/NailApi.modules.coffee.md
 [NailApi.to]: ./spec/NailApi.to.coffee.md
 [NailApi.use]: ./spec/NailApi.use.coffee.md
 [NailApi]: ./spec/NailApi.coffee.md

@@ -7,7 +7,7 @@
   },
   "build": {
     "sourceFiles": [],
-    "components": ["NailApi.to", "NailApi.use", "NailApi"]
+    "components": ["NailApi.modules", "NailApi.to", "NailApi.use", "NailApi"]
   },
   "coverage": {
     "statements": 90,

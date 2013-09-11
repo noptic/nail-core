@@ -19,6 +19,9 @@ Structure
       it 'is a function', ->
         nail.use.should.be.a 'function'
 
+Description
+-----------
+
       it 'should not return the called object', ->
         nail.use().should.not.equal nail
 

@@ -29,7 +29,17 @@ describe('nail-core', function() {
   });
 });
 
-describe('modules', function() {
+var nail, should, they, _;
+
+should = require('should');
+
+nail = require('../coverage/instrument/lib/module.js');
+
+_ = require('underscore');
+
+they = it;
+
+describe('NailApi.modules', function() {
   it('is an array', function() {
     return _.isArray(nail.modules).should.be.ok;
   });

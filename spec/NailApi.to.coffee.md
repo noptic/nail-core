@@ -21,6 +21,9 @@ Structure
       it 'is a function', ->
         nail.to.should.be.a 'function'
 
+Description
+-----------
+
       it 'returns an empty object if called with no arguments', ->
         nail.to().should.eql({})
 
