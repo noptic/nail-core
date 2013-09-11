@@ -1,5 +1,7 @@
-NailApi.to
-==========
+[NailApi]: ./NailApi.coffee.md
+
+[NailApi].to
+============
 This function creates one or more new classes.
 It accepts an object containing class definitions as it´s last parameter.
 

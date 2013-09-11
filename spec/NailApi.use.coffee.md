@@ -1,5 +1,7 @@
-NailCore.use
-============
+[NailApi]: ./NailApi.coffee.md
+
+[NailApi].use
+=============
 The `use` function creates a new instance of NailApi with additional modules.
 
 Definitions
@@ -62,3 +64,4 @@ Every new API inherits it's parents modules.
         childNail   = parentNail.use module2
         should.equal childNail.modules[0], module1
         should.equal childNail.modules[1], module2
+

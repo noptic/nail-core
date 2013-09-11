@@ -44,9 +44,9 @@ to create new classes.
 
 Documentation
 -------------
- - [NailApi.to][]
- - [NailApi.use][]
- - [NailApi][]
+- [NailApi][NailApi]
+    - [to][NailApi.to]
+    - [use][NailApi.use]
 
 
 Dependencies

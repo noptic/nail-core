@@ -108,6 +108,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'docs', ->
     fs = require 'fs'
+    _ = require 'underscore'
     packageInfo = grunt.file.readJSON('package.json')
     #links from configuration
     related = configuration.see
@@ -120,7 +121,7 @@ module.exports = (grunt) ->
         #usemodules homepageif it is set
         if moduleInfo.homepage
           related[module] = moduleInfo.homepage
-        #orfallback to the npm page
+        #or fallback to the npm page
         else
           related[module] ="https://npmjs.org/package/#{module}"
 
@@ -128,11 +129,33 @@ module.exports = (grunt) ->
       related[component] = "./#{configuration.path.specs}/#{component}.coffee.md"
     about = fs.readFileSync('about.md').toString().trim()
 
+    #Documentation
     about += "\n\nDocumentation\n-------------"
+    componentTree = {}
     for component in components
-      about += "\n - [#{component}][]"
+      node = componentTree
+      for part in component.split('.')
+        if _.isUndefined node.children
+          node.children = {}
+        if _.isUndefined node.children[part]
+          node.children[part] = {}
+        node = node.children[part]
+      node.link = component
+
+    for name,value of componentTree
+      printTree = (currentNode,indent,callback) ->
+        for name,value of currentNode.children
+          if value.link
+            about += "\n#{indent}- [#{name}][#{value.link}]"
+          else
+            about += "\n[indent- #{name}"
+          if value.children
+            callback(value,'    '+indent,callback)
+
+    printTree(componentTree,'',printTree)
     about += "\n"
 
+    #Dependencies
     about += "\n\nDependencies\n------------"
     for name,version of packageInfo.dependencies
       if related[name]
@@ -141,6 +164,7 @@ module.exports = (grunt) ->
         about += "\n - #{name} #{version}"
     about += "\n"
 
+    #Dev-Devendencies
     about += "\n\nDev-Dependencies\n----------------"
     for name,version of packageInfo.devDependencies
       if related[name]
