@@ -1,7 +1,7 @@
 [NailApi].to
 ============
 This function creates one or more new classes.
-It accepts an object containing class definitions as it´s last parameter.
+It accepts an object containing class definitions as the last parameter.
 
 Definitions
 -----------

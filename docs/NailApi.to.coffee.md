@@ -25,7 +25,7 @@
 [NailApi].to
 ============
 This function creates one or more new classes.
-It accepts an object containing class definitions as it�s last parameter.
+It accepts an object containing class definitions as the last parameter.
 
 Definitions
 -----------
@@ -98,7 +98,7 @@ data.
           nail.lib['MyNamespace.MyClass'].should.equal lib.MyClass
 
 Classes can be added to a container and a namespace by calling
-`to(container, namespace, definitions`.
+`to(container, namespace, definitions)`.
 
         it 'adds classes to nail.lib and a container', ->
           lib = {}
@@ -132,13 +132,6 @@ fully qualifiedname will throw an error.
 Meta data about each class is added to the class constructor.
 This meta data includes:
 
- - name - The class name
- - nail - The NailApi which was used to define the class
- - container - The class the container was added to
- - namespace - The classes namespace
- - fullyQualifiedName - The classes fully qualified class name
- - definition - The normalized class definition
-
       describe 'adds meta data to the constructor, which', ->
         lib = {}
         classDefinition = {}
@@ -163,3 +156,10 @@ This meta data includes:
 
         it 'contains the original class definition', ->
           instance.constructor.definition.should.equal classDefinition
+
+ - name - The class name
+ - nail - The NailApi which was used to define the class
+ - container - The class the container was added to
+ - namespace - The classes namespace
+ - fullyQualifiedName - The classes fully qualified class name
+ - definition - The normalized class definition
