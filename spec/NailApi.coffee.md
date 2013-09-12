@@ -33,13 +33,13 @@ The instance is an object.
 
 The object has 3 properties:
 
-APIs must be created with calls to [NailApi.use].
-Parent is a reference to the API´s parent API.
+APIs must be created with the factory method [NailApi.use].
+The API which creates a new API is considered the new API's `parent`.
 
       it 'has a "parent" property', ->
         nail.should.have.property 'parent'
 
-The array [NailApi.modules] contains all modules this API uses.
+The array [modules][NailApi.modules] contains all modules this API uses.
 
       it 'has a "modules" property', ->
         nail.should.have.property 'modules'
