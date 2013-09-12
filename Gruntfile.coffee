@@ -183,7 +183,7 @@ module.exports = (grunt) ->
     #other docs
     internalLinks = ""
     for component in components
-      internalLinks += "[#{component}]: ./#{component}.coffe.md\n"
+      internalLinks += "[#{component}]: ./#{component}.coffee.md\n"
     for component in components
       spec = fs.readFileSync(
         "./#{configuration.path.specs}/#{component}.coffee.md"

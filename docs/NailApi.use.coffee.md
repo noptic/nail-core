@@ -17,10 +17,10 @@
 [underscore]: http://underscorejs.org
 
 
-[NailApi.modules]: ./NailApi.modules.coffe.md
-[NailApi.to]: ./NailApi.to.coffe.md
-[NailApi.use]: ./NailApi.use.coffe.md
-[NailApi]: ./NailApi.coffe.md
+[NailApi.modules]: ./NailApi.modules.coffee.md
+[NailApi.to]: ./NailApi.to.coffee.md
+[NailApi.use]: ./NailApi.use.coffee.md
+[NailApi]: ./NailApi.coffee.md
 
 [NailApi].use
 =============
