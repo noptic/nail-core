@@ -125,8 +125,6 @@ module.exports = (grunt) ->
         else
           related[module] ="https://npmjs.org/package/#{module}"
 
-    for component in components
-      related[component] = "./#{configuration.path.specs}/#{component}.coffee.md"
     about = fs.readFileSync('about.md').toString().trim()
 
     #Documentation
@@ -142,15 +140,14 @@ module.exports = (grunt) ->
         node = node.children[part]
       node.link = component
 
-    for name,value of componentTree
-      printTree = (currentNode,indent,callback) ->
-        for name,value of currentNode.children
-          if value.link
-            about += "\n#{indent}- [#{name}][#{value.link}]"
-          else
-            about += "\n[indent- #{name}"
-          if value.children
-            callback(value,'    '+indent,callback)
+    printTree = (currentNode,indent,callback) ->
+      for name,value of currentNode.children
+        if value.link
+          about += "\n#{indent}- [#{name}][#{value.link}]"
+        else
+          about += "\n[indent- #{name}"
+        if value.children
+          callback(value,'    '+indent,callback)
 
     printTree(componentTree,'',printTree)
     about += "\n"
@@ -173,7 +170,26 @@ module.exports = (grunt) ->
         about += "\n - #{name} #{version}"
     about += "\n"
 
+    externalLinks = ''
     for name,link of related
-      about += "\n[#{name}]: #{link}"
+      externalLinks += "\n[#{name}]: #{link}"
+    externalLinks +="\n\n"
 
-    fs.writeFileSync('README.md',about)
+    #write README.md
+    for component in components
+      about = "[#{component}]: ./#{configuration.path.docs}/#{component}.coffee.md\n"+about
+    fs.writeFileSync('README.md',externalLinks+about)
+
+    #other docs
+    internalLinks = ""
+    for component in components
+      internalLinks += "[#{component}]: ./#{component}.coffe.md\n"
+    for component in components
+      spec = fs.readFileSync(
+        "./#{configuration.path.specs}/#{component}.coffee.md"
+      ).toString().trim()
+
+      fs.writeFileSync(
+        "./#{configuration.path.docs}/#{component}.coffee.md"
+        [externalLinks,internalLinks,spec].join "\n"
+      )

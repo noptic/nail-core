@@ -1,3 +1,25 @@
+
+[nail]: https://github.com/noptic/nail
+[npm]: https://github.com/noptic/nail
+[grunt]: http://gruntjs.com/
+[grunt-coffeelint]: https://github.com/vojtajina/grunt-coffeelint
+[grunt-contrib-coffee]: https://github.com/gruntjs/grunt-contrib-coffee
+[grunt-contrib-concat]: https://github.com/gruntjs/grunt-contrib-concat
+[grunt-contrib-nodeunit]: https://github.com/gruntjs/grunt-contrib-nodeunit
+[grunt-istanbul]: https://github.com/taichi/grunt-istanbul
+[grunt-istanbul-coverage]: https://github.com/daniellmb/grunt-istanbul-coverage
+[grunt-jscoverage]: https://github.com/andrewkeig/grunt-jscoverage
+[grunt-mocha-cov]: https://github.com/mmoulton/grunt-mocha-cov
+[grunt-simple-mocha]: https://github.com/yaymukund/grunt-simple-mocha
+[js-yaml]: https://github.com/nodeca/js-yaml
+[mocha]: https://npmjs.org/package/mocha
+[should]: https://github.com/visionmedia/should.js
+[underscore]: http://underscorejs.org
+
+[NailApi]: ./docs/NailApi.coffee.md
+[NailApi.use]: ./docs/NailApi.use.coffee.md
+[NailApi.to]: ./docs/NailApi.to.coffee.md
+[NailApi.modules]: ./docs/NailApi.modules.coffee.md
 nail-core
 =========
 The `nail-core` serves as a module host for nail build enviroments.
@@ -64,24 +86,3 @@ Dev-Dependencies
  - [should] ~1.2.2
  - [grunt-istanbul-coverage] 0.0.1
  - [grunt-istanbul] ~0.2.3
-
-[nail]: https://github.com/noptic/nail
-[npm]: https://github.com/noptic/nail
-[grunt]: http://gruntjs.com/
-[grunt-coffeelint]: https://github.com/vojtajina/grunt-coffeelint
-[grunt-contrib-coffee]: https://github.com/gruntjs/grunt-contrib-coffee
-[grunt-contrib-concat]: https://github.com/gruntjs/grunt-contrib-concat
-[grunt-contrib-nodeunit]: https://github.com/gruntjs/grunt-contrib-nodeunit
-[grunt-istanbul]: https://github.com/taichi/grunt-istanbul
-[grunt-istanbul-coverage]: https://github.com/daniellmb/grunt-istanbul-coverage
-[grunt-jscoverage]: https://github.com/andrewkeig/grunt-jscoverage
-[grunt-mocha-cov]: https://github.com/mmoulton/grunt-mocha-cov
-[grunt-simple-mocha]: https://github.com/yaymukund/grunt-simple-mocha
-[js-yaml]: https://github.com/nodeca/js-yaml
-[mocha]: https://npmjs.org/package/mocha
-[should]: https://github.com/visionmedia/should.js
-[underscore]: http://underscorejs.org
-[NailApi.modules]: ./spec/NailApi.modules.coffee.md
-[NailApi.to]: ./spec/NailApi.to.coffee.md
-[NailApi.use]: ./spec/NailApi.use.coffee.md
-[NailApi]: ./spec/NailApi.coffee.md
