@@ -20,6 +20,8 @@
 [NailApi.modules]: ./NailApi.modules.coffee.md
 [NailApi.to]: ./NailApi.to.coffee.md
 [NailApi.use]: ./NailApi.use.coffee.md
+[NailApi.parent]: ./NailApi.parent.coffee.md
+[NailApi.lib]: ./NailApi.lib.coffee.md
 [NailApi]: ./NailApi.coffee.md
 
 [NailApi].modules

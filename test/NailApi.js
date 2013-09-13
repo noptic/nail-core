@@ -29,6 +29,8 @@ describe('nail-core', function() {
   });
 });
 
+
+
 var nail, should, they, _;
 
 should = require('should');
@@ -99,6 +101,8 @@ describe('NailApi.modules', function() {
     return calls[1].should.equal('module2 calling');
   });
 });
+
+
 
 var nail, should, they, _;
 

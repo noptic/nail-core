@@ -141,7 +141,8 @@ module.exports = (grunt) ->
       node.link = component
 
     printTree = (currentNode,indent,callback) ->
-      for name,value of currentNode.children
+      for name in _.keys(currentNode.children).sort()
+        value = currentNode.children[name]
         if value.link
           about += "\n#{indent}- [#{name}][#{value.link}]"
         else

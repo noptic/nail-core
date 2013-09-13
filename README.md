@@ -17,6 +17,8 @@
 [underscore]: http://underscorejs.org
 
 [NailApi]: ./docs/NailApi.coffee.md
+[NailApi.lib]: ./docs/NailApi.lib.coffee.md
+[NailApi.parent]: ./docs/NailApi.parent.coffee.md
 [NailApi.use]: ./docs/NailApi.use.coffee.md
 [NailApi.to]: ./docs/NailApi.to.coffee.md
 [NailApi.modules]: ./docs/NailApi.modules.coffee.md
@@ -67,7 +69,9 @@ to create new classes.
 Documentation
 -------------
 - [NailApi][NailApi]
+    - [lib][NailApi.lib]
     - [modules][NailApi.modules]
+    - [parent][NailApi.parent]
     - [to][NailApi.to]
     - [use][NailApi.use]
 
