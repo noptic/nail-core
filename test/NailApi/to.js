@@ -44,7 +44,7 @@ describe('NailApi.to', function() {
       return lib.foo.should.equal('bar');
     });
   });
-  describe('using a namespace', function() {
+  return describe('using a namespace', function() {
     beforeEach(function() {
       return nail.lib = {};
     });
@@ -82,7 +82,7 @@ describe('NailApi.to', function() {
       className = 'MyNamespace.MyClass';
       return newNail.lib.should.not.have.property(className);
     });
-    return it('requires a unique class name', function() {
+    it('requires a unique class name', function() {
       var lib;
       lib = nail.to('MyNamespace', {
         MyClass: {}
@@ -98,32 +98,6 @@ describe('NailApi.to', function() {
         return _results;
       }).should["throw"]();
     });
-  });
-  return describe('adds meta data to the constructor, which', function() {
-    var classDefinition, instance, lib;
-    lib = {};
-    classDefinition = {};
-    nail.to(lib, 'MyNamespace', {
-      MyClass: classDefinition
-    });
-    instance = new lib.MyClass();
-    it('contains the class name', function() {
-      return instance.constructor.className.should.equal('MyClass');
-    });
-    it('contains the NailApi', function() {
-      return instance.constructor.nail.should.equal(nail);
-    });
-    it('contains the class container', function() {
-      return instance.constructor.container.should.equal(lib);
-    });
-    it('contains the namespace', function() {
-      return instance.constructor.namespace.should.equal('MyNamespace');
-    });
-    it('contains the fully qualified class name', function() {
-      return instance.constructor.fullyQualifiedName.should.equal('MyNamespace.MyClass');
-    });
-    return it('contains the original class definition', function() {
-      return instance.constructor.definition.should.equal(classDefinition);
-    });
+    return nail.lib = {};
   });
 });
