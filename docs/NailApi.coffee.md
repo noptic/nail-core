@@ -22,12 +22,12 @@
 
 NailApi
 =============
-nail creates classes from structured objects, using a seperate module for every
-aspect of the class like properties and methods. The `nail-core` offers an API
-to bundle modules into a new `NailApi`.
+nail creates classes from structured objects, using a seperate 
+[module][About.modules] for every aspect of the class like properties and 
+methods. The `nail-core` offers an API to bundle modules into a new `NailApi`.
 
-The core itself is a instance of `NailApi`and adds important meta data to the
-constructor.
+The core itself is a instance of `NailApi` and adds important 
+[meta data][About.meta-data] to every new class constructor.
 
 Definitions
 -----------
@@ -39,17 +39,13 @@ Definitions
 
 Creating an API
 ---------------
-`nail-core` does not expose the constructor of `NailApi`.
 To create a new API use [NailApi.use].
 
 Structure
 ---------
-The module exports an instance of `NailApi`.
+The module exports an object.
 
     describe 'nail-core', ->
-
-The instance is an object.
-
       it 'is an object', ->
         nail.should.be.a 'object'
 
