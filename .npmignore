@@ -3,6 +3,7 @@
 /spec/
 /src/
 /test/
+/.c9revisions/
 .gitignore
 Gruntfile.coffee
 build.json
