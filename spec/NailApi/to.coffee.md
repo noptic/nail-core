@@ -7,7 +7,7 @@ Definitions
 -----------
 
     should  = require 'should'
-    nail    = require '../coverage/instrument/lib/module.js'
+    nail    = require '../../coverage/instrument/lib/module.js'
     _       = require 'underscore'
     they    = it #more natural language for describing array properties
 

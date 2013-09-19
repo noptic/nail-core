@@ -16,6 +16,9 @@
       "NailApi"
     ]
   },
+  "extension":{
+    "spec": ".coffee.md"
+  },
   "coverage": {
     "statements": 90,
     "functions": 90,

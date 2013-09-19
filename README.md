@@ -1,38 +1,29 @@
 
-[nail]: https://github.com/noptic/nail
-[npm]: https://github.com/noptic/nail
-[grunt]: http://gruntjs.com/
-[grunt-coffeelint]: https://github.com/vojtajina/grunt-coffeelint
+[glob]: https://npmjs.org/package/glob
 [grunt-contrib-coffee]: https://github.com/gruntjs/grunt-contrib-coffee
-[grunt-contrib-concat]: https://github.com/gruntjs/grunt-contrib-concat
-[grunt-contrib-nodeunit]: https://github.com/gruntjs/grunt-contrib-nodeunit
-[grunt-istanbul]: https://github.com/taichi/grunt-istanbul
 [grunt-istanbul-coverage]: https://github.com/daniellmb/grunt-istanbul-coverage
-[grunt-jscoverage]: https://github.com/andrewkeig/grunt-jscoverage
-[grunt-mocha-cov]: https://github.com/mmoulton/grunt-mocha-cov
+[grunt-istanbul]: https://github.com/taichi/grunt-istanbul
 [grunt-simple-mocha]: https://github.com/yaymukund/grunt-simple-mocha
-[js-yaml]: https://github.com/nodeca/js-yaml
+[grunt]: http://gruntjs.com/
 [mocha]: https://npmjs.org/package/mocha
 [should]: https://github.com/visionmedia/should.js
 [underscore]: http://underscorejs.org
 
-[NailApi]: ./docs/NailApi.coffee.md
-[NailApi.lib]: ./docs/NailApi.lib.coffee.md
-[NailApi.parent]: ./docs/NailApi.parent.coffee.md
-[NailApi.use]: ./docs/NailApi.use.coffee.md
-[NailApi.to]: ./docs/NailApi.to.coffee.md
-[NailApi.modules]: ./docs/NailApi.modules.coffee.md
+[nail]: https://github.com/noptic/nail
+[npm]: https://github.com/noptic/nail
+
+[About.meta-data]: spec/About/meta-data.coffee.md
+[About.modules]: spec/About/modules.coffee.md
+[NailApi]: spec/NailApi.coffee.md
+[NailApi.lib]: spec/NailApi/lib.coffee.md
+[NailApi.modules]: spec/NailApi/modules.coffee.md
+[NailApi.parent]: spec/NailApi/parent.coffee.md
+[NailApi.to]: spec/NailApi/to.coffee.md
+[NailApi.use]: spec/NailApi/use.coffee.md
+
 nail-core
 =========
 The `nail-core` serves as a module host for nail build enviroments.
-
-Setup
------
-Install the module with [npm]:
-
-```bash
-npm install nail-core --save`
-```
 
 Usage
 -----
@@ -53,7 +44,7 @@ Once you have created a nail builder you can create new classes with the "[NailA
 function.
 
 ```coffee
-nail.to "myNamespace",
+myNail.to "myNamespace",
   MyClass:
     properties:
       name: 'anon'
@@ -66,23 +57,24 @@ For a quick start use the [nail] bundle.
 It already contains some modules and illustartes how to use nail builders
 to create new classes.
 
-Documentation
--------------
-- [NailApi][NailApi]
-    - [lib][NailApi.lib]
-    - [modules][NailApi.modules]
-    - [parent][NailApi.parent]
-    - [to][NailApi.to]
-    - [use][NailApi.use]
+##Setup
+Install with npm:
+```bash
+npm install nail-core
+```
 
+Clone with GIT:
+```bash
+git clone git://github.com/noptic/nail-core.git
+```
 
-Dependencies
-------------
+##Documentation
+Head here → [docs](docs)
+
+##Dependencies
  - [underscore] ~1.5.1
 
-
-Dev-Dependencies
-----------------
+##DevDependencies
  - [grunt-contrib-coffee] 0.7.0
  - [grunt] 0.4.1
  - [grunt-simple-mocha] ~0.4.0
