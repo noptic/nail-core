@@ -6,7 +6,7 @@ nail = require('../../coverage/instrument/lib/module.js');
 
 _ = require('underscore');
 
-describe('meta data', function() {
+describe('About.meta-data', function() {
   var classDefinition, instance, lib;
   lib = {};
   classDefinition = {};
