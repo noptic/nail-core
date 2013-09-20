@@ -31,7 +31,7 @@ Features
 
  - create classes from structured objects
  - create custom builders with [modules][About.modules]
- - relaevant [meta data][About.meta-data] is added to all constructors
+ - relevant [meta data][About.meta-data] is added to all constructors
  - optional [namespace][About.namespaces] support
  - lean [API][NailApi]
  
