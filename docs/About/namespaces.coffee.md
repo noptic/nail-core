@@ -22,5 +22,5 @@
 [nail]: https://github.com/noptic/nail
 [npm]: https://github.com/noptic/nail
 
-[About].modules
-=============
+[About].namespaces
+==================

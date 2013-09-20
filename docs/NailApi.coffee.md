@@ -11,6 +11,7 @@
 [About]: About.coffee.md
 [About.meta-data]: About/meta-data.coffee.md
 [About.modules]: About/modules.coffee.md
+[About.namespaces]: About/namespaces.coffee.md
 [NailApi]: NailApi.coffee.md
 [NailApi.lib]: NailApi/lib.coffee.md
 [NailApi.modules]: NailApi/modules.coffee.md

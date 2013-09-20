@@ -15,6 +15,7 @@
 [About]: spec/About.coffee.md
 [About.meta-data]: spec/About/meta-data.coffee.md
 [About.modules]: spec/About/modules.coffee.md
+[About.namespaces]: spec/About/namespaces.coffee.md
 [NailApi]: spec/NailApi.coffee.md
 [NailApi.lib]: spec/NailApi/lib.coffee.md
 [NailApi.modules]: spec/NailApi/modules.coffee.md
@@ -26,6 +27,15 @@ About
 =====
 The `nail-core` serves as a module host for nail build enviroments.
 
+Features
+--------
+
+ - create classes from structured objects
+ - create custom builders with [modles][About.modules]
+ - relaevant [meta data][About.metadat] is added to all constructors
+ - optional [namespace][About.namespaces] support
+ - lean [API][NailApi]
+ 
 Usage
 -----
 To create a new build enviroment use [NailApi.use]:
