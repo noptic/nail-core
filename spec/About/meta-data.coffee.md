@@ -12,9 +12,6 @@ Definitions
 
 Structure
 ---------
-###meta data
-Meta data about each class is added to the class constructor.
-This meta data includes:
 
     describe 'About.meta-data', ->
       lib = {}
@@ -23,6 +20,8 @@ This meta data includes:
         MyClass: classDefinition
       instance = new lib.MyClass()
 
+Meta data about each class is added to the class constructor.
+This meta data includes:
 
 name - The class name.
 
