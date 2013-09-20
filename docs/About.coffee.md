@@ -30,8 +30,8 @@ Features
 --------
 
  - create classes from structured objects
- - create custom builders with [modles][About.modules]
- - relaevant [meta data][About.metadat] is added to all constructors
+ - create custom builders with [modules][About.modules]
+ - relaevant [meta data][About.meta-data] is added to all constructors
  - optional [namespace][About.namespaces] support
  - lean [API][NailApi]
  
