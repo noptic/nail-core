@@ -8,6 +8,7 @@
 [should]: https://github.com/visionmedia/should.js
 [underscore]: http://underscorejs.org
 
+[About]: ../About.coffee.md
 [About.meta-data]: meta-data.coffee.md
 [About.modules]: modules.coffee.md
 [NailApi]: ../NailApi.coffee.md
@@ -20,7 +21,7 @@
 [nail]: https://github.com/noptic/nail
 [npm]: https://github.com/noptic/nail
 
-About.meta-data
+[About].meta-data
 ===============
 [NailApi.to] adds meta dat to every new class.
 The nail modules require this data to augment the class

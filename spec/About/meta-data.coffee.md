@@ -1,4 +1,4 @@
-About.meta-data
+[About].meta-data
 ===============
 [NailApi.to] adds meta dat to every new class.
 The nail modules require this data to augment the class

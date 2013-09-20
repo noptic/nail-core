@@ -1,4 +1,3 @@
-
 [glob]: https://npmjs.org/package/glob
 [grunt-contrib-coffee]: https://github.com/gruntjs/grunt-contrib-coffee
 [grunt-istanbul-coverage]: https://github.com/daniellmb/grunt-istanbul-coverage
@@ -9,18 +8,18 @@
 [should]: https://github.com/visionmedia/should.js
 [underscore]: http://underscorejs.org
 
+[About]: About.coffee.md
+[About.meta-data]: About/meta-data.coffee.md
+[About.modules]: About/modules.coffee.md
+[NailApi]: NailApi.coffee.md
+[NailApi.lib]: NailApi/lib.coffee.md
+[NailApi.modules]: NailApi/modules.coffee.md
+[NailApi.parent]: NailApi/parent.coffee.md
+[NailApi.to]: NailApi/to.coffee.md
+[NailApi.use]: NailApi/use.coffee.md
+
 [nail]: https://github.com/noptic/nail
 [npm]: https://github.com/noptic/nail
-
-[About]: spec/About.coffee.md
-[About.meta-data]: spec/About/meta-data.coffee.md
-[About.modules]: spec/About/modules.coffee.md
-[NailApi]: spec/NailApi.coffee.md
-[NailApi.lib]: spec/NailApi/lib.coffee.md
-[NailApi.modules]: spec/NailApi/modules.coffee.md
-[NailApi.parent]: spec/NailApi/parent.coffee.md
-[NailApi.to]: spec/NailApi/to.coffee.md
-[NailApi.use]: spec/NailApi/use.coffee.md
 
 About
 =====
@@ -57,29 +56,3 @@ For a quick start use the [nail] bundle.
 
 It already contains some modules and illustartes how to use nail builders
 to create new classes.
-
-##Setup
-Install with npm:
-```bash
-npm install nail-core
-```
-
-Clone with GIT:
-```bash
-git clone git://github.com/noptic/nail-core.git
-```
-
-##Documentation
-Head here → [docs](docs)
-
-##Dependencies
- - [underscore] ~1.5.1
-
-##DevDependencies
- - [grunt-contrib-coffee] 0.7.0
- - [grunt] 0.4.1
- - [grunt-simple-mocha] ~0.4.0
- - [mocha] ~1.12.0
- - [should] ~1.2.2
- - [grunt-istanbul-coverage] 0.0.1
- - [grunt-istanbul] ~0.2.3

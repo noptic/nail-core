@@ -175,7 +175,7 @@ module.exports = (grunt) ->
     if (!links) 
       grunt.task.run('links')
     readme.push [links.external, links.manual, links.perDirectory['.']].join("\n")
-    readme.push fs.readFileSync 'about.md'
+    readme.push fs.readFileSync 'spec/About.coffee.md'
     readme.push """
       
       ##Setup
