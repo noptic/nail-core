@@ -1,8 +1,10 @@
-var nail, should, they, _;
+var modules, nail, should, they, _;
 
 should = require('should');
 
-nail = require('../../coverage/instrument/lib/module.js');
+modules = require('../About/modules');
+
+nail = require('./use');
 
 _ = require('underscore');
 

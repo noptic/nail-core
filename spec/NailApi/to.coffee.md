@@ -5,9 +5,11 @@ It accepts an object containing class definitions as the last parameter.
 
 Definitions
 -----------
+Reuse the [NailApi] defined in [NailApi.use]. 
 
     should  = require 'should'
-    nail    = require '../../coverage/instrument/lib/module.js'
+    modules = require '../About/modules'
+    nail    = require './use'
     _       = require 'underscore'
     they    = it #more natural language for describing array properties
 
@@ -37,7 +39,7 @@ container and definitions, adds all new classes to the container.
 
 The container must be an object.
 
-A refference to the container will be added to the classes meta data.
+A refference to the container will be added to the classes [meta data][About.meta-data].
 
       describe 'using a container', ->
 

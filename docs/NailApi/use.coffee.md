@@ -24,13 +24,16 @@
 
 [NailApi].use
 =============
-The `use` function creates a new instance of NailApi with additional modules.
+The `use` function creates a new instance of NailApi with 
+additional [modules][About.modules].
 
 Definitions
 -----------
+Reuse the modules defined in [About.modules].
 
     should  = require 'should'
     nail    = require '../../coverage/instrument/lib/module.js'
+    sampleModules = require '../About/modules'
     _       = require 'underscore'
     they    = it #more natural language for describing array properties
 
@@ -54,39 +57,49 @@ Any module passed to `use` is added to the new APIs modules, but the called APIs
 modules remain unchanged.
 
 Once a API is created it should not be edited. If you have to edit the API you
-should do so *before* using it.
+should do so *before* using or exporting it.
 
       it 'adds a module to the copy', ->
-        module  = augment: 'single module'
-        newNail = nail.use module
-        newNail.modules.should.includeEql module
+        newNail = nail.use sampleModules.simpleProperties
+        newNail.modules.should.includeEql sampleModules.simpleProperties
 
       it 'adds multiple modules to the copy', ->
-        module1 = augment: 'module1'
-        module2 = augment: 'module2'
-        newNail = nail.use module1, module2
-        newNail.modules.should.includeEql module1
-        newNail.modules.should.includeEql module2
-
+        newNail = nail.use(
+          sampleModules.simpleProperties
+          sampleModules.simpleMethods
+        )
+        newNail.modules.should.includeEql sampleModules.simpleProperties
+        newNail.modules.should.includeEql sampleModules.simpleMethods
+        
       it 'does not change the called API', ->
-        module  = augment: 'single module'
-        newNail = nail.use module
+        newNail = nail.use sampleModules.simpleProperties
         nail.modules.length.should.equal 0
 
 The new APIs `parent` property references the APIs which created the new API.
 
       it 'sets the copys "parent"', ->
-        module  = augment: 'single module'
-        newNail = nail.use module
+        newNail = nail.use()
         newNail.parent.should.equal nail
 
+###Inheritance
 Every new API inherits it's parents modules.
 
       it 'adds the parents modules to the copy', ->
-        module1     = augment: 'module1'
-        module2     = augment: 'module2'
-        parentNail  = nail.use module1
-        childNail   = parentNail.use module2
-        should.equal childNail.modules[0], module1
-        should.equal childNail.modules[1], module2
+        parentNail  = nail.use sampleModules.simpleProperties
+        childNail   = parentNail.use sampleModules.simpleMethods
+        should.equal childNail.modules[0], sampleModules.simpleProperties
+        should.equal childNail.modules[1], sampleModules.simpleMethods
 
+###Exporting a Nail API
+Nail APIs can be exported like all other objects:
+
+    module.exports = nail.use(
+        sampleModules.simpleProperties
+        sampleModules.simpleMethods
+      )
+    
+See
+---
+
+  - Howto create [modules][About.modules]
+  - Create classes with [NailApi.to]

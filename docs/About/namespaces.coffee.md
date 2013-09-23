@@ -24,3 +24,8 @@
 
 [About].namespaces
 ==================
+Nail supports namespaces.
+
+###Global Namespace
+If a namespace name is passed to [nail.to] nail will add the created classes
+to the class libary `Nail.lib`

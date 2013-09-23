@@ -29,9 +29,11 @@ It accepts an object containing class definitions as the last parameter.
 
 Definitions
 -----------
+Reuse the [NailApi] defined in [NailApi.use]. 
 
     should  = require 'should'
-    nail    = require '../../coverage/instrument/lib/module.js'
+    modules = require '../About/modules'
+    nail    = require './use'
     _       = require 'underscore'
     they    = it #more natural language for describing array properties
 
