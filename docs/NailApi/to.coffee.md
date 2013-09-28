@@ -9,9 +9,9 @@
 [underscore]: http://underscorejs.org
 
 [About]: ../About.coffee.md
+[About.generic-commands]: ../About/generic-commands.coffee.md
 [About.meta-data]: ../About/meta-data.coffee.md
 [About.modules]: ../About/modules.coffee.md
-[About.namespaces]: ../About/namespaces.coffee.md
 [NailApi]: ../NailApi.coffee.md
 [NailApi.lib]: lib.coffee.md
 [NailApi.modules]: modules.coffee.md
@@ -63,7 +63,7 @@ container and definitions, adds all new classes to the container.
 
 The container must be an object.
 
-A refference to the container will be added to the classes meta data.
+A refference to the container will be added to the classes [meta data][About.meta-data].
 
       describe 'using a container', ->
 

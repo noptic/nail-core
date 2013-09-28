@@ -24,7 +24,8 @@ to = (arg1, arg2, arg3) ->
 
   for name,definition of classes
     newClass = () ->
-      @init.apply(this, arguments)
+      if ! _.isUndefined @['GEN:constructor']
+        @['GEN:constructor'].apply(this, arguments)
     fullyQualifiedName = null
     if namespace
       fullyQualifiedName = "#{namespace}.#{name}"
@@ -40,8 +41,6 @@ to = (arg1, arg2, arg3) ->
       definition:         definition
     }
       newClass[metaKey] = metaValue
-
-    newClass::init = () ->
 
     for module in @modules
       module.augment newClass

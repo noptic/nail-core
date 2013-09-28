@@ -9,9 +9,9 @@
 [underscore]: http://underscorejs.org
 
 [About]: ../About.coffee.md
+[About.generic-commands]: generic-commands.coffee.md
 [About.meta-data]: meta-data.coffee.md
 [About.modules]: modules.coffee.md
-[About.namespaces]: namespaces.coffee.md
 [NailApi]: ../NailApi.coffee.md
 [NailApi.lib]: ../NailApi/lib.coffee.md
 [NailApi.modules]: ../NailApi/modules.coffee.md

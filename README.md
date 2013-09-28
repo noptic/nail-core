@@ -13,9 +13,9 @@
 [npm]: https://github.com/noptic/nail
 
 [About]: spec/About.coffee.md
+[About.generic-commands]: spec/About/generic-commands.coffee.md
 [About.meta-data]: spec/About/meta-data.coffee.md
 [About.modules]: spec/About/modules.coffee.md
-[About.namespaces]: spec/About/namespaces.coffee.md
 [NailApi]: spec/NailApi.coffee.md
 [NailApi.lib]: spec/NailApi/lib.coffee.md
 [NailApi.modules]: spec/NailApi/modules.coffee.md
