@@ -1,7 +1,7 @@
 {
   "name": "nail-core",
   "description": "Module host for nail build enviroments.",
-  "version": "0.1.0beta1",
+  "version": "0.1.0beta3",
   "homepage": "https://github.com/noptic/nail-core",
   "author": {
     "name": "noptic",
