@@ -1,7 +1,7 @@
 {
   "name": "nail-core",
   "description": "Module host for nail build enviroments.",
-  "version": "0.1.0beta3",
+  "version": "0.1.0beta4",
   "homepage": "https://github.com/noptic/nail-core",
   "author": {
     "name": "noptic",
@@ -34,7 +34,8 @@
     "mocha": "~1.12.0",
     "should": "~1.2.2",
     "grunt-istanbul-coverage": "0.0.1",
-    "grunt-istanbul": "~0.2.3"
+    "grunt-istanbul": "~0.2.3",
+    "glob": "~3.2.9"
   },
   "dependencies": {
     "underscore": "~1.5.1"

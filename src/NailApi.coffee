@@ -8,6 +8,7 @@ class NailApi
   modules: []
   parent: null
   lib: {}
+  classes: {}
   use:  use
   to:   to
 

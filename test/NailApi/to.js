@@ -65,6 +65,14 @@ describe('NailApi.to', function() {
       });
       return lib.MyClass.should.equal(nail.lib['MyNamespace.MyClass']);
     });
+    it('adds classes to nail.classes and a container', function() {
+      var lib;
+      lib = {};
+      nail.to(lib, 'MyNamespace', {
+        MyClass: {}
+      });
+      return lib.MyClass.should.equal(nail.classes.MyNamespace.MyClass);
+    });
     it('shares one class libary on all APIs', function() {
       var className, newNail;
       newNail = nail.use();

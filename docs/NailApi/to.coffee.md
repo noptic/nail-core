@@ -8,11 +8,11 @@
 [should]: https://github.com/visionmedia/should.js
 [underscore]: http://underscorejs.org
 
-[About]: ../About.coffee.md
-[About.generic-commands]: ../About/generic-commands.coffee.md
-[About.meta-data]: ../About/meta-data.coffee.md
-[About.modules]: ../About/modules.coffee.md
-[NailApi]: ../NailApi.coffee.md
+[About]: ..\About.coffee.md
+[About.generic-commands]: ..\About\generic-commands.coffee.md
+[About.meta-data]: ..\About\meta-data.coffee.md
+[About.modules]: ..\About\modules.coffee.md
+[NailApi]: ..\NailApi.coffee.md
 [NailApi.lib]: lib.coffee.md
 [NailApi.modules]: modules.coffee.md
 [NailApi.parent]: parent.coffee.md
@@ -29,7 +29,7 @@ It accepts an object containing class definitions as the last parameter.
 
 Definitions
 -----------
-Reuse the [NailApi] defined in [NailApi.use]. 
+Reuse the [NailApi] defined in [NailApi.use].
 
     should  = require 'should'
     modules = require '../About/modules'
@@ -106,6 +106,13 @@ Classes can be added to a container and a namespace by calling
           lib = {}
           nail.to lib, 'MyNamespace', MyClass: {}
           lib.MyClass.should.equal nail.lib['MyNamespace.MyClass']
+
+Classes can be accesed with the 'dot' syntax and the `c�asses` field.
+
+        it 'adds classes to nail.classes and a container', ->
+          lib = {}
+          nail.to lib, 'MyNamespace', MyClass: {}
+          lib.MyClass.should.equal nail.classes.MyNamespace.MyClass
 
 By default all instances of `NailApi` share one class libary.
 

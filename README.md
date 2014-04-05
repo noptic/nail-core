@@ -12,16 +12,16 @@
 [nail]: https://github.com/noptic/nail
 [npm]: https://github.com/noptic/nail
 
-[About]: spec/About.coffee.md
-[About.generic-commands]: spec/About/generic-commands.coffee.md
-[About.meta-data]: spec/About/meta-data.coffee.md
-[About.modules]: spec/About/modules.coffee.md
-[NailApi]: spec/NailApi.coffee.md
-[NailApi.lib]: spec/NailApi/lib.coffee.md
-[NailApi.modules]: spec/NailApi/modules.coffee.md
-[NailApi.parent]: spec/NailApi/parent.coffee.md
-[NailApi.to]: spec/NailApi/to.coffee.md
-[NailApi.use]: spec/NailApi/use.coffee.md
+[About]: spec\About.coffee.md
+[About.generic-commands]: spec\About\generic-commands.coffee.md
+[About.meta-data]: spec\About\meta-data.coffee.md
+[About.modules]: spec\About\modules.coffee.md
+[NailApi]: spec\NailApi.coffee.md
+[NailApi.lib]: spec\NailApi\lib.coffee.md
+[NailApi.modules]: spec\NailApi\modules.coffee.md
+[NailApi.parent]: spec\NailApi\parent.coffee.md
+[NailApi.to]: spec\NailApi\to.coffee.md
+[NailApi.use]: spec\NailApi\use.coffee.md
 
 About
 =====
@@ -93,3 +93,4 @@ Head here → [docs](docs)
  - [should] ~1.2.2
  - [grunt-istanbul-coverage] 0.0.1
  - [grunt-istanbul] ~0.2.3
+ - [glob] ~3.2.9

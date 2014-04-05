@@ -5,7 +5,7 @@ It accepts an object containing class definitions as the last parameter.
 
 Definitions
 -----------
-Reuse the [NailApi] defined in [NailApi.use]. 
+Reuse the [NailApi] defined in [NailApi.use].
 
     should  = require 'should'
     modules = require '../About/modules'
@@ -83,21 +83,20 @@ Classes can be added to a container and a namespace by calling
           nail.to lib, 'MyNamespace', MyClass: {}
           lib.MyClass.should.equal nail.lib['MyNamespace.MyClass']
 
-By default all instances of `NailApi` share one class libary.
+Classes can be accesed with the 'dot' syntax and the `cöasses` field.
+
+        it 'adds classes to nail.classes and a container', ->
+          lib = {}
+          nail.to lib, 'MyNamespace', MyClass: {}
+          lib.MyClass.should.equal nail.classes.MyNamespace.MyClass
+
+All instances of `NailApi` share one class libary.
 
         it 'shares one class libary on all APIs',->
           newNail = nail.use()
           nail.to 'MyNamespace', MyClass: {}
           className = 'MyNamespace.MyClass'
           nail.lib[className].should.equal newNail.lib[className]
-
-
-        it 'can use a seperate class libary',->
-          newNail = nail.use()
-          newNail.lib = {}
-          nail.to 'MyNamespace', MyClass: {}
-          className = 'MyNamespace.MyClass'
-          newNail.lib.should.not.have.property className
 
 Every fully qualified name must be unique. Defining 2 classes with the same
 fully qualifiedname will throw an error.

@@ -32,6 +32,12 @@ to = (arg1, arg2, arg3) ->
       if @lib[fullyQualifiedName]
         throw new Error("can not redifine #{fullyQualifiedName}")
       @lib[fullyQualifiedName] = newClass
+      node = @classes
+      for part in namespace.split '.'
+        if _.isUndefined node[part]
+          node[part] = {}
+        node = node[part]
+      node[name] = newClass
     for metaKey, metaValue of {
       className:          name
       nail:               this

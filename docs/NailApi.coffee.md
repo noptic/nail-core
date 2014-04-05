@@ -9,15 +9,15 @@
 [underscore]: http://underscorejs.org
 
 [About]: About.coffee.md
-[About.generic-commands]: About/generic-commands.coffee.md
-[About.meta-data]: About/meta-data.coffee.md
-[About.modules]: About/modules.coffee.md
+[About.generic-commands]: About\generic-commands.coffee.md
+[About.meta-data]: About\meta-data.coffee.md
+[About.modules]: About\modules.coffee.md
 [NailApi]: NailApi.coffee.md
-[NailApi.lib]: NailApi/lib.coffee.md
-[NailApi.modules]: NailApi/modules.coffee.md
-[NailApi.parent]: NailApi/parent.coffee.md
-[NailApi.to]: NailApi/to.coffee.md
-[NailApi.use]: NailApi/use.coffee.md
+[NailApi.lib]: NailApi\lib.coffee.md
+[NailApi.modules]: NailApi\modules.coffee.md
+[NailApi.parent]: NailApi\parent.coffee.md
+[NailApi.to]: NailApi\to.coffee.md
+[NailApi.use]: NailApi\use.coffee.md
 
 [nail]: https://github.com/noptic/nail
 [npm]: https://github.com/noptic/nail

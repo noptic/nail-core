@@ -8,11 +8,11 @@
 [should]: https://github.com/visionmedia/should.js
 [underscore]: http://underscorejs.org
 
-[About]: ../About.coffee.md
-[About.generic-commands]: ../About/generic-commands.coffee.md
-[About.meta-data]: ../About/meta-data.coffee.md
-[About.modules]: ../About/modules.coffee.md
-[NailApi]: ../NailApi.coffee.md
+[About]: ..\About.coffee.md
+[About.generic-commands]: ..\About\generic-commands.coffee.md
+[About.meta-data]: ..\About\meta-data.coffee.md
+[About.modules]: ..\About\modules.coffee.md
+[NailApi]: ..\NailApi.coffee.md
 [NailApi.lib]: lib.coffee.md
 [NailApi.modules]: modules.coffee.md
 [NailApi.parent]: parent.coffee.md

@@ -100,6 +100,11 @@
         .cstat-no { background: #fc8c84; color: #111; }
         .fstat-no { background: #ffc520; color: #111 !important; }
         .cbranch-no { background:  yellow !important; color: #111; }
+
+        .cstat-skip { background: #ddd; color: #111; }
+        .fstat-skip { background: #ddd; color: #111 !important; }
+        .cbranch-skip { background: #ddd !important; color: #111; }
+
         .missing-if-branch {
             display: inline-block;
             margin-right: 10px;
@@ -107,9 +112,18 @@
             padding: 0 4px;
             background: black;
             color: yellow;
-            xtext-decoration: line-through;
         }
-        .missing-if-branch .typ {
+
+        .skip-if-branch {
+            display: none;
+            margin-right: 10px;
+            position: relative;
+            padding: 0 4px;
+            background: #ccc;
+            color: white;
+        }
+
+        .missing-if-branch .typ, .skip-if-branch .typ {
             color: inherit !important;
         }
 
@@ -176,6 +190,8 @@
             margin: 0 !important;
         }
         .com { color: #999 !important; }
+        .ignore-none { color: #999; font-weight: normal; }
+
     </style>
 </head>
 <body>
@@ -183,19 +199,20 @@
     <h1>Code coverage report for <span class="entity">lib/module.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">100% <small>(67 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">100% <small>(76 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">100% <small>(14 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(16 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
         Functions: <span class="metric">100% <small>(5 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">100% <small>(67 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(76 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib/</a> &#187; module.js</div>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib\</a> &#187; module.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -303,18 +320,30 @@
 102
 103
 104
-105</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">17</span>
-<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">16</span>
-<span class="cline-any cline-yes">2</span>
-<span class="cline-any cline-yes">2</span>
-<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
 <span class="cline-any cline-yes">14</span>
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-yes">2</span>
@@ -330,41 +359,51 @@
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
-<span class="cline-any cline-yes">16</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-yes">10</span>
 <span class="cline-any cline-yes">6</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15</span>
-<span class="cline-any cline-yes">90</span>
-<span class="cline-any cline-yes">90</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15</span>
-<span class="cline-any cline-yes">15</span>
-<span class="cline-any cline-yes">29</span>
-<span class="cline-any cline-yes">29</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
@@ -390,6 +429,8 @@
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
@@ -412,7 +453,7 @@
 _ = require('underscore');
 &nbsp;
 to = function(arg1, arg2, arg3) {
-  var classes, container, definition, fullyQualifiedName, metaKey, metaValue, module, name, namespace, newClass, _i, _len, _ref, _ref1;
+  var classes, container, definition, fullyQualifiedName, metaKey, metaValue, module, name, namespace, newClass, node, part, _i, _j, _len, _len1, _ref, _ref1, _ref2;
   if (arguments.length === 0) {
     return {};
   } else if (arguments.length &gt;= 3) {
@@ -448,8 +489,18 @@ to = function(arg1, arg2, arg3) {
         throw new Error("can not redifine " + fullyQualifiedName);
       }
       this.lib[fullyQualifiedName] = newClass;
+      node = this.classes;
+      _ref = namespace.split('.');
+      for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {
+        part = _ref[_i];
+        if (_.isUndefined(node[part])) {
+          node[part] = {};
+        }
+        node = node[part];
+      }
+      node[name] = newClass;
     }
-    _ref = {
+    _ref1 = {
       className: name,
       nail: this,
       container: container,
@@ -457,13 +508,13 @@ to = function(arg1, arg2, arg3) {
       fullyQualifiedName: fullyQualifiedName,
       definition: definition
     };
-    for (metaKey in _ref) {
-      metaValue = _ref[metaKey];
+    for (metaKey in _ref1) {
+      metaValue = _ref1[metaKey];
       newClass[metaKey] = metaValue;
     }
-    _ref1 = this.modules;
-    for (_i = 0, _len = _ref1.length; _i &lt; _len; _i++) {
-      module = _ref1[_i];
+    _ref2 = this.modules;
+    for (_j = 0, _len1 = _ref2.length; _j &lt; _len1; _j++) {
+      module = _ref2[_j];
       module.augment(newClass);
     }
     container[name] = newClass;
@@ -502,6 +553,8 @@ NailApi = (function() {
 &nbsp;
   NailApi.prototype.lib = {};
 &nbsp;
+  NailApi.prototype.classes = {};
+&nbsp;
   NailApi.prototype.use = use;
 &nbsp;
   NailApi.prototype.to = to;
@@ -516,7 +569,7 @@ module.exports = new NailApi();
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Sep 28 2013 18:24:43 GMT-0400 (EDT)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 05 2014 03:58:49 GMT+0200 (Mitteleuropäische Sommerzeit)</div>
 </div>
 
 <script src="../prettify.js"></script>
